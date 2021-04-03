@@ -1,7 +1,9 @@
-import { Layout, Flex, LogoContainer, Logo, ButtonGroup } from "../components/Containers"
+import { Layout, Flex, ButtonGroup } from "../components/Containers"
 import { H1, H2, H3 } from "../components/Heading"
 import Button from "../components/Button"
+import Header from "../components/Header"
 import { Favorite } from "@material-ui/icons";
+
 import { useState } from "react";
 // import { Button } from "@material-ui/core";
 
@@ -17,11 +19,11 @@ const Main = () => {
         { donationValues.map((v, i) => {
           if (v === currentValue) {
             return (
-              <Button key={i} current onClick={() => handleClick(v)}>{`R$${v},00`}</Button>
+              <Button key={i} current onClick={() => setCurrentValue(v)}>{`R$${v},00`}</Button>
             )
           } else {
             return (
-              <Button key={i} onClick={() => handleClick(v)}>{`R$${v},00`}</Button>
+              <Button key={i} onClick={() => setCurrentValue(v)}>{`R$${v},00`}</Button>
             )
           }
         })}
@@ -29,18 +31,10 @@ const Main = () => {
     )
   }
 
-  const handleClick = (value) => {
-    setCurrentValue(value)
-  }
-
+  
   return (
     <Layout>
-      <Flex column>
-        <H1>Bem vindo ao</H1>
-        <LogoContainer>
-          <Logo src="/Logo.png" alt="Logo" />
-        </LogoContainer>
-      </Flex>
+      <Header />
       <Flex column>
         <H2>Ajude um Pet</H2>
         <Flex>
