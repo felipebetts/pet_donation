@@ -6,7 +6,7 @@ const ColorButton = withStyles(() => ({
       color: "#070707",
       backgroundColor: "#45ffb3",
       '&:hover': {
-        backgroundColor: "#33c588",
+        backgroundColor: "#45ffb3",
       },
       font: "inherit",
       fontWeight: 700,
@@ -20,6 +20,9 @@ const ColorButton = withStyles(() => ({
         backgroundColor: "#33c588",
         color: "#070707",
         fontWeight: 600,
+      },
+      '&:active': {
+        backgroundColor: "#45ffb3",
       },
       border: "solid 1px #45ffb3",
       fontWeight: 500,
