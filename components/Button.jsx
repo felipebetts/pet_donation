@@ -8,9 +8,6 @@ const ColorButton = withStyles(() => ({
       '&:hover': {
         backgroundColor: "#33c588",
       },
-      '&:active': {
-        backgroundColor: "#45ffb3"
-      },
       font: "inherit",
       fontWeight: 700,
       margin: "0.3rem",
