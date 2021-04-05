@@ -6,7 +6,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
 `
 
