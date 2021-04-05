@@ -3,12 +3,15 @@ import styled from "styled-components"
 export const Layout = styled.div`
     padding: 1rem;
     width: 100%;
-    maw-width: 800px;
+    max-width: 800px;
+    margin: auto;
 `
 export const Flex = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align:center;
+    margin-top: 30px;
 
     flex-direction:${props => props.column ? "column" : "row"};
     ${props => props.margin ? `margin: ${props.margin};` : ''}
@@ -28,7 +31,11 @@ export const ButtonGroup = styled.div`
     align-items: center;
     flex-wrap: wrap;
     width: 330px;
-    maw-width: 100%;
+    max-width: 100%;
+    
+    @media(max-width: 350px) {
+        width: 300px;
+    };
 
     margin: auto;
 `

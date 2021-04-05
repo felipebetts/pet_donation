@@ -1,5 +1,5 @@
 import { Flex, Logo, LogoContainer } from "./Containers"
-import { H1 } from "./Heading"
+import { H1 } from "./Text"
 
 const Header = () => {
     return (

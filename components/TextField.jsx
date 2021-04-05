@@ -46,7 +46,6 @@ const TextField = ({ value, onChange, type }) => {
             value={value}
             id="custom-text-field"
             onChange={e => onChange(e)}
-            inputMode="numeric"
             type={type}
             />
         </DonationForm>
