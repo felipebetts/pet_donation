@@ -41,9 +41,9 @@ export const ButtonGroup = styled.div`
 `
 
 export const DonationForm = styled.form`
-    width: 100px;
+    width: 150px;
 
-    margin: 20px;
+    margin: 20px 10px;
 
     display: flex;
     align-items: center;

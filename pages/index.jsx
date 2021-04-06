@@ -8,6 +8,7 @@ import Carousel from "../components/Carousel"
 
 import { useState } from "react";
 import Button from "../components/Button"
+import Indicators from "../components/Indicators";
 // import { Button } from "@material-ui/core";
 
 const Main = () => {
@@ -49,15 +50,13 @@ const Main = () => {
       <Flex>
         <Carousel />
       </Flex>
-      <Flex margin="30px 0px" column>
+      <Flex column>
         <H2>O que é o DOE AjudaPet?</H2>
         <Parag>Pessoas doando para Pets que precisam</Parag>
         <Parag>Pets que precisam sendo direcionados para receber tratamento</Parag>
         <Parag>Clínicas e Petshops associadas recebendo essas demandas</Parag>
       </Flex>
-      {/* <Flex margin="30px 0px">
-        <H2>INDICADORES</H2>
-      </Flex> */}
+      <Indicators />
     </Layout>
   )
 }
