@@ -1,8 +1,11 @@
 import styled from "styled-components"
 
 export const GroupContainer = styled.div`
-    width: 100%;
+    width: 80%;
 
+    @media(max-width: 450px) {
+        width: 100%;
+    };
 
     display: flex;
     flex-wrap: wrap;
