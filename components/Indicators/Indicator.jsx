@@ -1,5 +1,5 @@
 import { Flex } from "../Containers"
-import { SingleContainer } from "./styles"
+import { SingleContainer, Text } from "./styles"
 
 
 const Indicator = ({Icon, amount, label}) => {
@@ -10,8 +10,8 @@ const Indicator = ({Icon, amount, label}) => {
                     <Icon /> 
                 </div>
             )}
-            <span>{amount}</span>
-            <span>{label}</span>
+            <Text>{amount}</Text>
+            <Text>{label}</Text>
         </SingleContainer>
     )
 }

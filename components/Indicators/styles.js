@@ -22,3 +22,7 @@ export const SingleContainer = styled.div`
     background: #343434;
 `
 
+export const Text = styled.span`
+    color: ${({theme}) => theme.colors.secondary };
+    margin-bottom: 5px;
+`
