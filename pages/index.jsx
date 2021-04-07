@@ -5,6 +5,7 @@ import { Favorite } from "@material-ui/icons";
 import GroupButton from "../components/DonationButtonGroup"
 import TextField from "../components/TextField"
 import Carousel from "../components/Carousel"
+import Link from "next/link"
 
 import { useState } from "react";
 import Button from "../components/Button"
@@ -31,6 +32,7 @@ const Main = () => {
             value={currentValue}
             onChange={(e) => handleChange(e)}
             type="number"
+            donation
           />
         </Flex>
         <Flex margin="10px 0px">
@@ -41,7 +43,9 @@ const Main = () => {
         </Flex>
         {/* <p>Selecione um valor para doar.</p> */}
         <Flex margin="30px 0px 0px 0px">
-          <Button donate>Doar</Button>
+          <Link href="/login">
+            <Button donate>Doar</Button>
+          </Link>
         </Flex>
         <Flex>
           <H3 secondary>Seu </H3><Favorite style={{ margin: "0rem 0.5rem", color: "#eee" }} /><H3 secondary> faz a diferença.</H3>

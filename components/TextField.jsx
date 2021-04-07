@@ -8,7 +8,7 @@ const CustomTextField = withStyles({
       color: "#45ffb3",
       borderBottomColor: '#45ffb3',
       fontSize: "2rem",
-      textAlign: "center"
+      textAlign: "center",
     },
     '& label.Mui-focused': {
       color: '#45ffb3',
@@ -24,34 +24,58 @@ const CustomTextField = withStyles({
     '& .MuiInput-underline:after': {
       borderBottomColor: '#45ffb3',
     },
-    // '& .MuiOutlinedInput-root': {
-    //   '& fieldset': {
-    //     borderColor: 'red',
-    //   },
-    //   '&:hover fieldset': {
-    //     borderColor: 'yellow',
-    //   },
-    //   '&.Mui-focused fieldset': {
-    //     borderColor: 'green',
-    //   },
-    // },
+    '& .MuiInputLabel-root': {
+      color: "#45ffb3",
+    },
+    '& .MuiOutlinedInput-root': {
+      color: "#eee",
+      '& fieldset': {
+        borderColor: '#45ffb3',
+      },
+      '&:hover fieldset': {
+        borderColor: "#33c588",
+      },
+      '&.Mui-focused fieldset': {
+        border: " 1px solid #45ffb3",
+      },
+    },
   },
 })(MuiTextField)
 
-const TextField = ({ value, onChange, type }) => {
-  return (
-    <Flex>
-      <DonationForm>
-        <label style={{ fontSize: "1.3rem"}}>R$</label>
+const TextField = ({ value, onChange, type, label, variant, donation, fieldWidth, fullWidth }) => {
+
+  if (!donation) {
+    return (
+      <Flex margin="20px 10px">
         <CustomTextField
           value={value}
           id="custom-text-field"
           onChange={e => onChange(e)}
           type={type}
-          // label="Editar"
+          label={label}
+          variant={variant}
+          style={{ width: fieldWidth }}
+          fullWidth={fullWidth}
+        />
+      </Flex>
+    )
+  }
+
+  return (
+    <Flex>
+      <DonationForm>
+      <label style={{ fontSize: "1.3rem"}}>R$</label>
+        <CustomTextField
+          value={value}
+          id="custom-text-field"
+          onChange={e => onChange(e)}
+          type={type}
+          label={label}
+          variant={variant}
+          style={{ width: fieldWidth }}
         />
       </DonationForm>
-      <label htmlFor="custom-text-field" style={{ cursor: "pointer" }}>Editar</label>
+        <label htmlFor="custom-text-field" style={{ cursor: "pointer" }}>Editar</label>
     </Flex>
   )
 }

@@ -7,6 +7,7 @@ const ColorButton = withStyles(() => ({
       backgroundColor: "#45ffb3",
       '&:hover': {
         backgroundColor: "#45ffb3",
+        backgroundColor: "#33c588",
       },
       font: "inherit",
       fontWeight: 700,
@@ -32,7 +33,7 @@ const ColorButton = withStyles(() => ({
     },
   }))(Button);
 
-const CustomButton = ({ children, onClick, current , donate}) => {
+const CustomButton = ({ children, onClick, current , donate, contained, fullWidth }) => {
 
     if (current) {
         return (
@@ -42,12 +43,16 @@ const CustomButton = ({ children, onClick, current , donate}) => {
 
     if (donate) {
         return (
-            <ColorButton size="large" fullWidth variant="contained">{children}</ColorButton>
+            <ColorButton size="large" fullWidth variant="contained" onClick={onClick}>{children}</ColorButton>
         )
     }
 
+    if (contained) {
+      return <ColorButton size="large" variant="contained" onClick={onClick}>{children}</ColorButton>
+    }
+
     return (
-        <ColorButton size="large" variant="outlined" onClick={onClick}>{children}</ColorButton>
+        <ColorButton size="large" fullWidth={fullWidth} variant="outlined" onClick={onClick}>{children}</ColorButton>
     )
 }
 

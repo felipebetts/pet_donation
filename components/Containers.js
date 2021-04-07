@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { ThemeConsumer } from "styled-components"
 
 export const Layout = styled.div`
     padding: 1rem;
@@ -48,3 +48,32 @@ export const DonationForm = styled.form`
     display: flex;
     align-items: center;
 `
+
+export const LoginContainer = styled.div`
+    margin: auto;
+    margin-top: 8%;
+    padding: 15px;
+    max-width: 600px;
+
+    border: solid 1px #444;
+    border-top: solid 5px #444;
+    border-radius: 5px;
+    
+    background: #343434;
+
+    text-align: center;
+
+    @media(min-width: 576px) {
+        padding: 15px 10%;
+    };
+`
+
+export const LoginFormContainer = styled.form`
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+`
+
+// color: ${({ theme }) => theme.colors.secondary};
