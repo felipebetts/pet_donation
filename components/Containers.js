@@ -59,7 +59,7 @@ export const LoginContainer = styled.div`
     border-top: solid 5px ${({ theme }) => theme.colors.primary};
     border-radius: 5px;
     
-    background: ${({ theme }) => theme.colors.background.secondary};
+    background: #343434;
 
     text-align: center;
 

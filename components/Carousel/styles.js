@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const CarouselItem = styled.div`
     height: 250px;
-    background: ${({ theme }) => theme.colors.background.secondary};
+    background: #343434;
     border: solid 1px #444;
 
 

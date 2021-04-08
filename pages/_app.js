@@ -4,10 +4,11 @@ const theme = {
   colors: {
     primary: "#45ffb3",
     secondary: "#eee",
-    background: {
-      primary: "#242424",
-      secondary: "#343434",
-    },
+    background: "#242424",
+    //  {
+      // primary: "#242424",
+      // secondary: "#343434",
+    // },
   }
 }
 
@@ -21,7 +22,7 @@ html body {
   margin: 0;
   padding: 0;
 
-  background: ${({ theme }) => theme.colors.background.primary};
+  background: ${({ theme }) => theme.colors.background};
   color: #eaeaea;
   color: ${({ theme }) => theme.colors.primary};
 

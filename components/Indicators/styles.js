@@ -22,7 +22,7 @@ export const SingleContainer = styled.div`
     flex-direction: column;
 
     background: #343434;
-    background: ${({ theme }) => theme.colors.background.secondary};
+
     
     border-radius: 5px;
     `
