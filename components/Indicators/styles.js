@@ -20,11 +20,13 @@ export const SingleContainer = styled.div`
     flex: 1;
     align-items: center;
     flex-direction: column;
+
+    background: #343434;
+    background: ${({ theme }) => theme.colors.background.secondary};
     
     border-radius: 5px;
-    background: ${({ theme }) => theme.colors.background.secondary};
-    ${(props) => props.border ? `border: solid 1px ${props.theme.colors.primary};` : "" }
-`
+    `
+    // ${(props) => props.border ? `border: solid 1px ${props.theme.colors.primary};` : "" }
 
 export const Text = styled.span`
     color: ${({theme}) => theme.colors.secondary };
