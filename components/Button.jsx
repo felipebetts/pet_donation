@@ -18,7 +18,7 @@ const ColorButton = withStyles(() => ({
       color: "#45ffb3",
       backgroundColor: "inherit",
       '&:hover': {
-        backgroundColor: "#33c588",
+        // backgroundColor: "#33c588",
         color: "#070707",
         fontWeight: 600,
       },

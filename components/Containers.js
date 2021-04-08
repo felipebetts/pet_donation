@@ -55,11 +55,11 @@ export const LoginContainer = styled.div`
     padding: 15px;
     max-width: 600px;
 
-    border: solid 1px #444;
-    border-top: solid 5px #444;
+    border: solid 1px ${({ theme }) => theme.colors.primary};
+    border-top: solid 5px ${({ theme }) => theme.colors.primary};
     border-radius: 5px;
     
-    background: #343434;
+    background: ${({ theme }) => theme.colors.background.secondary};
 
     text-align: center;
 

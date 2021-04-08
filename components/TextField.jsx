@@ -26,6 +26,7 @@ const CustomTextField = withStyles({
     },
     '& .MuiInputLabel-root': {
       color: "#45ffb3",
+      fontFamily: "Roboto Mono",
     },
     '& .MuiOutlinedInput-root': {
       color: "#eee",

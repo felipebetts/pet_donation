@@ -16,11 +16,13 @@ const Main = () => {
 
   const [currentValue, setCurrentValue] = useState(50)
 
+  const onChange = (value) => {
+    const reg = /^[0-9\b]+$/;
 
-  const handleChange = e => {
-    const currentInput = +e.target.value
-    setCurrentValue(currentInput)
-  }
+    if (value === '' || reg.test(value)) {
+      setCurrentValue(value)
+    }
+}
 
   return (
     <Layout>
@@ -30,7 +32,7 @@ const Main = () => {
           <H2>Selecione um valor para doar.</H2>
           <TextField
             value={currentValue}
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => onChange(e.target.value)}
             type="number"
             donation
           />

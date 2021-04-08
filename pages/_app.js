@@ -4,7 +4,10 @@ const theme = {
   colors: {
     primary: "#45ffb3",
     secondary: "#eee",
-    background: "#242424",
+    background: {
+      primary: "#242424",
+      secondary: "#343434",
+    },
   }
 }
 
@@ -18,11 +21,15 @@ html body {
   margin: 0;
   padding: 0;
 
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.background.primary};
   color: #eaeaea;
   color: ${({ theme }) => theme.colors.primary};
 
   font-family: "Roboto Mono", monospace;
+}
+
+a {
+  color: ${({ theme }) => theme.colors.primary};
 }
 
 input[type='number'] {

@@ -22,7 +22,8 @@ export const SingleContainer = styled.div`
     flex-direction: column;
     
     border-radius: 5px;
-    background: #343434;
+    background: ${({ theme }) => theme.colors.background.secondary};
+    ${(props) => props.border ? `border: solid 1px ${props.theme.colors.primary};` : "" }
 `
 
 export const Text = styled.span`
